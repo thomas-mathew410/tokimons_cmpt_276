@@ -13,7 +13,8 @@ express()
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
-  .get('/landingpage', (req, res) => res.render('pages/landingpage'))
+  .get('/landingpage', (req, res) => res.render('pages/landing'))
+  // .get('/landingpage', (req, res) => res.sendfile(path.join(__dirname+'/views/pages/landing.ejs')))
   .get('/db', async (req, res) => {
     try {
       const client = await pool.connect()

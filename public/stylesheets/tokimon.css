@@ -1,0 +1,75 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  #backgroundImage {
+    
+    background-image: url("pictures/Pikachu.jpg");
+  
+    
+    height: 200%; 
+  
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .tokimonSelections {
+    margin-left: 40%;
+  }
+
+  .listOfTokimons {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .listOfTokimons img {
+    width: 75%;
+    height: auto;
+  }
+  
+  .listOfTokimons .centered {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    /* transform: translate(-50%, -50%); */
+  }
+
+  .addTokimon {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .addTokimon img {
+    width: 75%;
+    height: auto;
+  }
+  
+  .addTokimon .centered {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    /* transform: translate(-50%, -50%); */
+  }
+
+  .removeTokimon {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .removeTokimon img {
+    width: 75%;
+    height: auto;
+  }
+  
+  .removeTokimon .centered {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    /* transform: translate(-50%, -50%); */
+  }
