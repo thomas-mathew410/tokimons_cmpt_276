@@ -8,20 +8,40 @@
     <!--
         <meta name="description" content="The HTML5 Herald">
         <meta name="author" content="SitePoint">
-        -->
-        <link rel="stylesheet" type="text/css" href="/stylesheets/tokimon.css" />
+    -->
+    <link rel="stylesheet" type="text/css" href="/stylesheets/tokimon.css" />
     <!-- <script type="text/javascript" src="/formjs.js"></script> -->
-
+    
+    <script src="js/addnew.js"></script>
 </head>
 
 <body>
-    <div id="backgroundImage">
-       <form action="/add" method="POST">
-        Value:
-        <input type="text" name="word"/>
-        <input type="submit"/>
+    <div id="addPageBackgroundImage">
+        <h2>Great! Add the tokimon you found to the tokimon database</h2>
+        <p>Enter the name of the Tokimon and the other details. The fields marked with an astrix takes only integers from 0 to 100. Be sure to fill all the fields correctly. The form will not be accepted otherwise!</p>
+       <form action="/add" onsubmit="return validateAddNew()" method="POST">
+            <p>Tokimon Name:
+            <input type="text" name="tokimonName" class="value"></p><br>
+            <p>Weight*:
+            <input type="number" name="tokimonWeight" class="value"></p><br>
+            <p>Height*:
+            <input type="number" name="tokimonHeight" class="value"></p><br>
+            <p>Fly*:
+            <input type="number" name="tokimonFly" class="value"></p><br>
+            <p>Fight*:
+            <input type="number" name="tokimonFight" class="value"></p><br>
+            <p>Fire*:
+            <input type="number" name="tokimonFire" class="value"></p><br>
+            <p>Water*:
+            <input type="number" name="tokimonWater" class="value"></p><br>
+            <p>Electric*:
+            <input type="number" name="tokimonElectric"class="value"></p><br>
+            <p>Frozen*:
+            <input type="number" name="tokimonFrozen" class="value"></p><br>
+            <p>Name of Trainer:
+            <input type="text" name="tokimonTrainer" class="value"></p><br>
+            <input type="submit" value="Submit">
         </form>
     </div>
-  <script src="js/scripts.js"></script>
 </body>
 </html>

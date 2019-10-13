@@ -33,7 +33,7 @@ express()
   })
 
   .get('/users', (req,res) => {
-    var getUsersQuery = `SELECT * FROM userstab`;
+    var getUsersQuery = `SELECT * FROM Tokimon`;
     console.log(getUsersQuery);
     pool.query(getUsersQuery, (error, result) => {
       if (error)
@@ -45,7 +45,7 @@ express()
   })  
   
   .post('/add', (req,res) => {
-    var updateUsersQuery = `INSERT INTO userstab (username) VALUES ('${req.body["word"]}')`;
+    var updateUsersQuery = `INSERT INTO Tokimon (t_name, t_weight, t_height, t_fly, t_fight, t_fire, t_water, t_electric, t_frozen, t_trainer) VALUES ('${req.body["tokimonName"]}', '${req.body["tokimonWeight"]}', '${req.body["tokimonHeight"]}', '${req.body["tokimonFly"]}', '${req.body["tokimonFight"]}', '${req.body["tokimonFire"]}', '${req.body["tokimonWater"]}', '${req.body["tokimonElectric"]}', '${req.body["tokimonFrozen"]}', '${req.body["tokimonTrainer"]}')`;
     console.log(updateUsersQuery);
     pool.query(updateUsersQuery, (error, result) => {
       if (error)
