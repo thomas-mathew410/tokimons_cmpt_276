@@ -45,8 +45,7 @@ express()
   })  
   
   .post('/add', (req,res) => {
-
-    var updateUsersQuery = `INSERT INTO userstab (username) VALUES (${req.body["word"]})`;
+    var updateUsersQuery = `INSERT INTO userstab (username) VALUES ('${req.body["word"]}')`;
     console.log(updateUsersQuery);
     pool.query(updateUsersQuery, (error, result) => {
       if (error)
