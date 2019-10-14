@@ -53,9 +53,9 @@ express()
         res.end(error);
       var results = {'rows': result.rows };
       
-      res.send(`${results.rows.forEach((r) => {r.id})}`);
-      // console.log(results);
-      // res.redirect(301, `/users`);
+      // res.send(`${results.rows.forEach((r) => {r.id})}`);
+      console.log(results);
+      res.redirect(301, `/users`);
     });
   })
 
