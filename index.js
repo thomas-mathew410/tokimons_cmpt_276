@@ -45,15 +45,14 @@ express()
   })  
   
   .post('/add', (req,res) => {
-    var addTokiQuery = `INSERT INTO Tokimon (t_name, t_weight, t_height, t_fly, t_fight, t_fire, t_water, t_electric, t_frozen, t_trainer) VALUES ('${req.body["tokimonName"]}', '${req.body["tokimonWeight"]}', '${req.body["tokimonHeight"]}', '${req.body["tokimonFly"]}', '${req.body["tokimonFight"]}', '${req.body["tokimonFire"]}', '${req.body["tokimonWater"]}', '${req.body["tokimonElectric"]}', '${req.body["tokimonFrozen"]}', '${req.body["tokimonTrainer"]}')`;
+    var addTokiQuery = `INSERT INTO Tokimon (t_name, t_weight, t_height, t_fly, t_fight, t_fire, t_water, t_electric, t_frozen, t_trainer) VALUES ('${req.body["tokimonName"]}', '${req.body["tokimonWeight"]}', '${req.body["tokimonHeight"]}', '${req.body["tokimonFly"]}', '${req.body["tokimonFight"]}', '${req.body["tokimonFire"]}', '${req.body["tokimonWater"]}', '${req.body["tokimonElectric"]}', '${req.body["tokimonFrozen"]}', '${req.body["tokimonTrainer"]}') RETURNING id`;
     console.log(addTokiQuery);
     pool.query(addTokiQuery, (error, result) => {
       if (error)
         res.end(error);
-      console.log('Hello');
       var results = {'rows': result.rows };
       console.log(results);
-      res.redirect(301, '/users');
+      res.redirect(301, `/users`);
     });
   })
 
@@ -106,6 +105,12 @@ express()
     });
     res.render('pages/afterUpdate', searchResults)
   })
+
+  .get('/users/:id', (req,res) => {
+    console.log(req.params.id);
+    var userIDQuery = `SELECT * FROM Tokimon WHERE id=${req.params.id}`;
+  })
+  
   
 
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
