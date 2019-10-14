@@ -39,7 +39,7 @@ express()
       if (error)
         res.end(error);
       var results = {'rows': result.rows };
-      res.json(results);
+      res.json(result);
       // console.log(results);
       // res.render('pages/users', results)
     });
