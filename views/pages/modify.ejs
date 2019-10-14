@@ -22,7 +22,7 @@
         <% rows.forEach((r) => { %>
             <form action="/modify" onsubmit="return validateAddNew()" method="POST">
                 <p>Tokimon ID: <%= r.id %>
-                <input type="text" name="tokimonID" class="value ToBeHidden" value=<%= r.id %>>
+                <input type="text" name="tokimonID" class="ToBeHidden" value=<%= r.id %>>
                 </p><br>
                 <p>Tokimon Name:
                 <input type="text" name="tokimonName" class="value" value=<%= r.t_name %>></p><br>
