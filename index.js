@@ -66,7 +66,8 @@ express()
       if (error)
         res.end(error);
       console.log('Hello');
-        deletedResults = {'rows': result.rows };
+      deletedResults = {'rows': result.rows };
+      res.json(deletedResults)
     });
     var deleteTokiQuery = `DELETE FROM Tokimon WHERE id='${req.body["tokiID"]}'`;
     console.log(deleteTokiQuery);
@@ -76,7 +77,6 @@ express()
       console.log('Hello');
     });
     // res.send(`POST request to the homepage ${deletedResults}`)
-    res.json(deletedResults)
     // res.render('pages/delete', deletedResults);
   })
   
