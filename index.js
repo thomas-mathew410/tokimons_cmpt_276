@@ -58,7 +58,6 @@ express()
   })
 
   .post('/delete', (req,res) => {
-    res.send('POST request to the homepage')
     var searchTokiQuery = `SELECT * FROM Tokimon WHERE id='${req.body["tokiID"]}'`;
     var deletedResults = new Object();
     pool.query(searchTokiQuery, (error, result) => {
@@ -74,6 +73,7 @@ express()
         res.end(error);
       console.log('Hello');
     });
+    res.send(`POST request to the homepage ${req.body["tokiID"]}`)
     res.render('pages/delete', deletedResults)
   })
   
