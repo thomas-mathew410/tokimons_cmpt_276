@@ -101,23 +101,24 @@ express()
         res.end(error);
       // console.log('Hello');
       // res.render('pages/update', updateResults)
+      // res.redirect(301, `/users/${req.body["tokimonID"]}`);
       res.redirect(301, `/users/${req.body["tokimonID"]}`);
     });
-    var searchTokiQuery = `SELECT * FROM Tokimon WHERE id='${req.body["#tokiID"]}'`;
-    // var searchResults = new Object(); 
-    pool.query(searchTokiQuery, (error, result) => {
-      if (error)
-        res.end(error);
-      var searchResults = {'rows': result.rows };
-      res.render('pages/afterUpdate', searchResults)
-    });
+    // var searchTokiQuery = `SELECT * FROM Tokimon WHERE id='${req.body["#tokiID"]}'`;
+    // // var searchResults = new Object(); 
+    // pool.query(searchTokiQuery, (error, result) => {
+    //   if (error)
+    //     res.end(error);
+    //   var searchResults = {'rows': result.rows };
+    //   res.render('pages/afterUpdate', searchResults)
+    // });
   })
 
-  .get('/users/:id', (req,res) => {
-    console.log(req.params.id);
-    var userIDQuery = `SELECT * FROM Tokimon WHERE id='${req.params.id}'`;
-    res.send('USER');
-  })
+  // .get('/users/:id', (req,res) => {
+  //   console.log(req.params.id);
+  //   var userIDQuery = `SELECT * FROM Tokimon WHERE id='${req.params.id}'`;
+  //   res.send('USER');
+  // })
   
   
 
