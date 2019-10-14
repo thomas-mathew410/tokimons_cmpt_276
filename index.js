@@ -83,12 +83,12 @@ express()
   
   .post('/selectToModify', (req,res) => {
     var searchTokiQuery = `SELECT * FROM Tokimon WHERE id='${req.body["#tokiID"]}'`;
-    var searchResults = new Object();
+    // var searchResults = new Object();
     pool.query(searchTokiQuery, (error, result) => {
       if (error)
         res.end(error);
-        searchResults = {'rows': result.rows };
-        res.render('pages/modify', searchResults)
+      var searchResults = {'rows': result.rows };
+      res.render('pages/modify', searchResults);
       });
       // res.render('pages/modify', searchResults)
   })
