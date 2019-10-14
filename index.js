@@ -40,7 +40,7 @@ express()
         res.end(error);
       var results = {'rows': result.rows };
       console.log(results);
-      res.render('pages/users', results)
+      //res.render('pages/users', results)
     });
   })  
   
