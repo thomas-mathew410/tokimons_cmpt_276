@@ -29,3 +29,11 @@ function validateAddNew() {
             }
         }
 }
+
+function confirmDelete() {
+    var r = confirm("Are you sure you want to delete!");
+}
+
+function confirmModify() {
+    var r = confirm("Are you sure you want to modify!");
+}

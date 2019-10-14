@@ -6,7 +6,7 @@
     <script src="js/script.js"></script>
   </head>
   <body>
-    <p>Tokimons are rare. This is the list of Tokimons found so far. Each Tokimon has a unique ID which can be used to distinguish those with similar characteristics.</p>
+    <p>There you go! This Tokimon has been updated in our Tokimon database.</p>
     <table>
       <thead>
         <tr>
@@ -42,9 +42,6 @@
            </th>
            <th>
             Tokimon Trainer
-           </th>
-           <th>
-            Options
            </th>
         </tr>
       </thead>
@@ -83,16 +80,6 @@
             </td>
             <td>
                 <%= r.t_trainer %>
-            </td>
-            <td>
-                <form action="/delete" onsubmit="return confirmDelete()" method="POST">
-                  <input class="ToBeHidden" type="text" id="tokiID" value=<%= r.id %>>
-                  <input type="submit" value="Delete">
-                </form><br>
-                <form action="/selectToModify" onsubmit="return confirmModify()" method="POST">
-                  <input class="ToBeHidden" type="text" id="tokiID" value=<%= r.id %>>
-                  <input type="submit" value="Modify">
-                </form><br>
             </td>
           </tr> 
         <% }); %>

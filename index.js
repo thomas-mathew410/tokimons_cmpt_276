@@ -55,7 +55,56 @@ express()
       console.log(results);
       res.send('POST request to the homepage')
     });
-  }) 
+  })
+
+  .post('/delete', (req,res) => {
+    var searchTokiQuery = `SELECT * FROM Tokimon WHERE id='${req.body["#tokiID"]}'`;
+    var deletedResults = new Object();
+    pool.query(searchTokiQuery, (error, result) => {
+      if (error)
+        res.end(error);
+      console.log('Hello');
+        deletedResults = {'rows': result.rows };
+    });
+    var deleteTokiQuery = `DELETE FROM Tokimon WHERE id='${req.body["#tokiID"]}'`;
+    console.log(deleteTokiQuery);
+    pool.query(deleteTokiQuery, (error) => {
+      if (error)
+        res.end(error);
+      console.log('Hello');
+    });
+    res.render('pages/delete', deletedResults)
+  })
+  
+  .post('/selectToModify', (req,res) => {
+    var searchTokiQuery = `SELECT * FROM Tokimon WHERE id='${req.body["#tokiID"]}'`;
+    var searchResults = new Object();
+    pool.query(searchTokiQuery, (error, result) => {
+      if (error)
+        res.end(error);
+        searchResults = {'rows': result.rows };
+    });
+    res.render('pages/modify', searchResults)
+  })
+
+  .post('/modify', (req,res) => {
+    var updateTokiQuery = `UPDATE Tokimon SET t_name='${req.body["tokimonName"]}', t_weight='${req.body["tokimonWeight"]}', t_height='${req.body["tokimonHeight"]}', t_fly='${req.body["tokimonFly"]}', t_fight='${req.body["tokimonFight"]}', t_fire='${req.body["tokimonFire"]}', t_water='${req.body["tokimonWater"]}', t_electric='${req.body["tokimonElectric"]}', t_frozen='${req.body["tokimonFrozen"]}', t_trainer='${req.body["tokimonTrainer"]}' WHERE id=${"tokimonID"}`;
+    console.log(updateTokiQuery);
+    pool.query(updateTokiQuery, (error) => {
+      if (error)
+        res.end(error);
+      console.log('Hello');
+      res.render('pages/update', updateResults)
+    });
+    var searchTokiQuery = `SELECT * FROM Tokimon WHERE id='${req.body["#tokiID"]}'`;
+    var searchResults = new Object(); 
+    pool.query(searchTokiQuery, (error, result) => {
+      if (error)
+        res.end(error);
+        searchResults = {'rows': result.rows };
+    });
+    res.render('pages/afterUpdate', searchResults)
+  })
   
 
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
