@@ -73,7 +73,7 @@ express()
         res.end(error);
       console.log('Hello');
     });
-    res.send(`POST request to the homepage ${req.body["tokiID"]}`)
+    res.send(`POST request to the homepage ${deletedResults}`)
     res.render('pages/delete', deletedResults)
   })
   
