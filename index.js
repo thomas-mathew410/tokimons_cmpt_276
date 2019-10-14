@@ -60,21 +60,22 @@ express()
   })
 
   .post('/delete', (req,res) => {
-    var searchTokiQuery = `SELECT * FROM Tokimon WHERE id='${req.body["tokiID"]}'`;
-    deletedResults
-    pool.query(searchTokiQuery, (error, result) => {
-      if (error)
-        res.end(error);
-      console.log('Hello');
-      deletedResults = {'rows': result.rows };
-    });
-    res.json(deletedResults)
+    // var searchTokiQuery = `SELECT * FROM Tokimon WHERE id='${req.body["tokiID"]}'`;
+    // var deletedResults = new Object();
+    // pool.query(searchTokiQuery, (error, result) => {
+    //   if (error)
+    //     res.end(error);
+    //   console.log('Hello');
+    //   deletedResults = {'rows': result.rows };
+    //   // res.json(deletedResults)
+    // });
     var deleteTokiQuery = `DELETE FROM Tokimon WHERE id='${req.body["tokiID"]}'`;
     console.log(deleteTokiQuery);
     pool.query(deleteTokiQuery, (error) => {
       if (error)
         res.end(error);
       console.log('Hello');
+      res.redirect(301, `/users`);
     });
     // res.send(`POST request to the homepage ${deletedResults}`)
     // res.render('pages/delete', deletedResults);
