@@ -40,7 +40,7 @@ express()
         res.end(error);
       var results = {'rows': result.rows };
       // res.json(result.rows);
-      console.log(results);
+      // console.log(results);
       res.render('pages/users', results)
     });
   })  
@@ -54,7 +54,7 @@ express()
       var results = {'rows': result.rows };
       
       // res.send(`${results.rows.forEach((r) => {r.id})}`);
-      console.log(results);
+      // console.log(results);
       res.redirect(301, `/users`);
     });
   })
@@ -87,6 +87,7 @@ express()
     pool.query(searchTokiQuery, (error, result) => {
       if (error)
         res.end(error);
+      console.log('Hello post method /select modify');
       var searchResults = {'rows': result.rows };
       res.render('pages/modify', searchResults);
       });
