@@ -53,7 +53,7 @@ express()
       console.log('Hello');
       var results = {'rows': result.rows };
       console.log(results);
-      res.render('pages/users');
+      res.redirect(301, '/users');
     });
   })
 
