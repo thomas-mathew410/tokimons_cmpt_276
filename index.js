@@ -59,7 +59,7 @@ express()
 
   .post('/delete', (req,res) => {
     console.log('Hello');
-    var searchTokiQuery = `SELECT * FROM Tokimon WHERE id='${req.body["#tokiID"]}'`;
+    var searchTokiQuery = `SELECT * FROM Tokimon WHERE id='${req.body["tokiID"]}'`;
     var deletedResults = new Object();
     pool.query(searchTokiQuery, (error, result) => {
       if (error)
@@ -67,7 +67,7 @@ express()
       console.log('Hello');
         deletedResults = {'rows': result.rows };
     });
-    var deleteTokiQuery = `DELETE FROM Tokimon WHERE id='${req.body["#tokiID"]}'`;
+    var deleteTokiQuery = `DELETE FROM Tokimon WHERE id='${req.body["tokiID"]}'`;
     console.log(deleteTokiQuery);
     pool.query(deleteTokiQuery, (error) => {
       if (error)
