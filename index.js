@@ -116,6 +116,7 @@ express()
   .get('/users/:id', (req,res) => {
     console.log(req.params.id);
     var userIDQuery = `SELECT * FROM Tokimon WHERE id='${req.params.id}'`;
+    res.send('USER');
   })
   
   
