@@ -2,15 +2,86 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>USERS</title>
+    <title>Tokimons</title>
   </head>
   <body>
-
-    <ul>
-      <% rows.forEach((r) => { %> 
-        <li><%= r.id %> <%= r.t_name %> <%= r.t_weight %> <%= r.t_height %> <%= r.t_fly %> <%= r.t_fight %> <%= r.t_fire %> <%= r.t_water %> <%= r.t_electric %> <%= r.t_frozen %> <%= r.t_trainer %></li>
-      <% }); %>
-
-    </ul>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            Tokimon ID
+          </th>
+          <th>
+            Tokimon Name
+          </th>
+          <th>
+            Tokimon Weight
+           </th>
+           <th>
+            Tokimon Height
+           </th>
+           <th>
+            Tokimon Fly
+           </th>
+           <th>
+            Tokimon Fight
+           </th>
+           <th>
+            Tokimon Fire
+           </th>
+           <th>
+            Tokimon Water
+           </th>
+           <th>
+            Tokimon Electric
+           </th>
+           <th>
+            Tokimon Frozen
+           </th>
+           <th>
+            Tokimon Trainer
+           </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% rows.forEach((r) => { %>
+          <tr>
+            <td>
+                <%= r.id %>
+            </td>
+            <td>
+                <%= r.t_name %>
+            </td>
+            <td>
+                <%= r.t_weight %>
+            </td>
+            <td>
+                <%= r.t_height %>
+            </td>
+            <td>
+                <%= r.t_fly %>
+            </td>
+            <td>
+                <%= r.t_fight %>
+            </td>
+            <td>
+                <%= r.t_fire %>
+            </td>
+            <td>
+                <%= r.t_water %>
+            </td>
+            <td>
+                <%= r.t_electric %>
+            </td>
+            <td>
+                <%= r.t_frozen %>
+            </td>
+            <td>
+                <%= r.t_trainer %>
+            </td>
+          </tr> 
+        <% }); %>
+      </tbody>
+    </table>
   </body>
 </html>
