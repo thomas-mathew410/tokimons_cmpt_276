@@ -52,7 +52,8 @@ express()
       if (error)
         res.end(error);
       var results = {'rows': result.rows };
-      res.json(results);
+      
+      res.json(result);
       // console.log(results);
       // res.redirect(301, `/users`);
     });
