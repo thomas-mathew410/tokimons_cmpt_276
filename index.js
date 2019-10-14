@@ -76,7 +76,8 @@ express()
       console.log('Hello');
     });
     // res.send(`POST request to the homepage ${deletedResults}`)
-    res.render('pages/delete', deletedResults);
+    res.json(deletedResults)
+    // res.render('pages/delete', deletedResults);
   })
   
   .post('/selectToModify', (req,res) => {
