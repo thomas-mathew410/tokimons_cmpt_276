@@ -101,7 +101,7 @@ express()
         res.end(error);
       // console.log('Hello');
       // res.render('pages/update', updateResults)
-      res.redirect(301, `/users`);
+      res.redirect(301, `/users/${req.body["tokimonID"]}`);
     });
     var searchTokiQuery = `SELECT * FROM Tokimon WHERE id='${req.body["#tokiID"]}'`;
     // var searchResults = new Object(); 
