@@ -89,11 +89,8 @@ express()
         res.end(error);
       console.log('Hello post method /select modify');
       var searchResults = {'rows': result.rows };
-      // res.render('pages/users', searchResults)
-      // res.json(searchResults);
       res.render('pages/modify', searchResults);
       });
-      // res.render('pages/modify', searchResults)
   })
 
   .post('/modify', (req,res) => {
@@ -102,15 +99,15 @@ express()
     pool.query(updateTokiQuery, (error) => {
       if (error)
         res.end(error);
-      console.log('Hello');
-      res.render('pages/update', updateResults)
+      // console.log('Hello');
+      // res.render('pages/update', updateResults)
     });
     var searchTokiQuery = `SELECT * FROM Tokimon WHERE id='${req.body["#tokiID"]}'`;
-    var searchResults = new Object(); 
+    // var searchResults = new Object(); 
     pool.query(searchTokiQuery, (error, result) => {
       if (error)
         res.end(error);
-        searchResults = {'rows': result.rows };
+        var searchResults = {'rows': result.rows };
     });
     res.render('pages/afterUpdate', searchResults)
   })
