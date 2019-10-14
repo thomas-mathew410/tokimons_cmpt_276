@@ -88,8 +88,9 @@ express()
       if (error)
         res.end(error);
         searchResults = {'rows': result.rows };
-    });
-    res.render('pages/modify', searchResults)
+        res.render('pages/modify', searchResults)
+      });
+      // res.render('pages/modify', searchResults)
   })
 
   .post('/modify', (req,res) => {
