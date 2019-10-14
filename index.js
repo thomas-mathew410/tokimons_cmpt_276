@@ -107,8 +107,8 @@ express()
     pool.query(searchTokiQuery, (error, result) => {
       if (error)
         res.end(error);
-        var searchResults = {'rows': result.rows };
-        res.render('pages/afterUpdate', searchResults)
+      var searchResults = {'rows': result.rows };
+      res.render('pages/afterUpdate', searchResults)
     });
   })
 
