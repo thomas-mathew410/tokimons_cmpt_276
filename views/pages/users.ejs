@@ -90,7 +90,7 @@
                   <input type="submit" value="Delete">
                 </form><br>
                 <form action="/selectToModify" onsubmit="return confirmModify()" method="POST">
-                  <input class="ToBeHidden" type="text" id="tokiID" value=<%= r.id %>>
+                  <input class="ToBeHidden" type="text" name="tokiID" id="tokiID" value=<%= r.id %>>
                   <input type="submit" value="Modify">
                 </form><br>
             </td>

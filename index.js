@@ -34,7 +34,7 @@ express()
 
   .get('/users', (req,res) => {
     var getUsersQuery = `SELECT * FROM Tokimon`;
-    console.log(getUsersQuery);
+    // console.log(getUsersQuery);
     pool.query(getUsersQuery, (error, result) => {
       if (error)
         res.end(error);
@@ -82,7 +82,7 @@ express()
   })
   
   .post('/selectToModify', (req,res) => {
-    var searchTokiQuery = `SELECT * FROM Tokimon WHERE id='${req.body["#tokiID"]}'`;
+    var searchTokiQuery = `SELECT * FROM Tokimon WHERE id='${req.body["tokiID"]}'`;
     // var searchResults = new Object();
     pool.query(searchTokiQuery, (error, result) => {
       if (error)
