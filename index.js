@@ -53,7 +53,7 @@ express()
       console.log('Hello');
       var results = {'rows': result.rows };
       console.log(results);
-      res.send('POST request to the homepage')
+      res.render('pages/users');
     });
   })
 
@@ -73,8 +73,8 @@ express()
         res.end(error);
       console.log('Hello');
     });
-    res.send(`POST request to the homepage ${deletedResults}`)
-    res.render('pages/delete', deletedResults)
+    // res.send(`POST request to the homepage ${deletedResults}`)
+    res.render('pages/delete', deletedResults);
   })
   
   .post('/selectToModify', (req,res) => {
