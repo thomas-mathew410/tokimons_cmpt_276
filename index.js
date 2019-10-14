@@ -89,6 +89,7 @@ express()
         res.end(error);
       console.log('Hello post method /select modify');
       var searchResults = {'rows': result.rows };
+      res.json(searchResults);
       res.render('pages/modify', searchResults);
       });
       // res.render('pages/modify', searchResults)
