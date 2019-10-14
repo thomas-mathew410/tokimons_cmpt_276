@@ -67,8 +67,8 @@ express()
         res.end(error);
       console.log('Hello');
       deletedResults = {'rows': result.rows };
-      res.json(deletedResults)
     });
+    res.json(deletedResults)
     var deleteTokiQuery = `DELETE FROM Tokimon WHERE id='${req.body["tokiID"]}'`;
     console.log(deleteTokiQuery);
     pool.query(deleteTokiQuery, (error) => {
