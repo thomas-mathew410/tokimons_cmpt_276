@@ -5,6 +5,7 @@
     <title>Tokimons</title>
   </head>
   <body>
+    <p>Tokimons are rare. This is the list of Tokimons found so far. Each Tokimon has a unique ID which can be used to distinguish ones with similar characteristics.</p>
     <table>
       <thead>
         <tr>
@@ -44,9 +45,10 @@
         </tr>
       </thead>
       <tbody>
+        <% var i = 0
         <% rows.forEach((r) => { %>
           <tr>
-            <td>
+            <td class=`<% i %>`>
                 <%= r.id %>
             </td>
             <td>
@@ -79,8 +81,13 @@
             <td>
                 <%= r.t_trainer %>
             </td>
+            <td>
+                <form>
+                  <input type="submit" value="Delete">
+                </form>
+            </td>
           </tr> 
-        <% }); %>
+        <% i++}); %>
       </tbody>
     </table>
   </body>
