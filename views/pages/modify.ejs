@@ -20,32 +20,33 @@
         <h2>Modify the the Tokimon</h2>
         <p>Sometimes the Tokimons mutate for mysterious reasons. Update the name of the Tokimon and the other details. The fields marked with an astrix takes only integers from 0 to 100. Be sure to fill all the fields correctly. The form will not be accepted otherwise!</p>
         <% rows.forEach((r) => { %>
-       <form action="/modify" onsubmit="return validateAddNew()" method="POST">
-            <p>Tokimon ID: <%= r.id %>
-            <input type="text" name="tokimonID" class="value ToBeHidden" value=<%= r.id %>>
-            </p><br>
-            <p>Tokimon Name:
-            <input type="text" name="tokimonName" class="value" value=<%= r.t_name %>></p><br>
-            <p>Weight*:
-            <input type="number" name="tokimonWeight" class="value" value=<%= r.t_weight %>></p><br>
-            <p>Height*:
-            <input type="number" name="tokimonHeight" class="value" value=<%= r.t_height %>></p><br>
-            <p>Fly*:
-            <input type="number" name="tokimonFly" class="value" value=<%= r.t_fly %>></p><br>
-            <p>Fight*:
-            <input type="number" name="tokimonFight" class="value" value=<%= r.t_fight %>></p><br>
-            <p>Fire*:
-            <input type="number" name="tokimonFire" class="value" value=<%= r.t_fire %>></p><br>
-            <p>Water*:
-            <input type="number" name="tokimonWater" class="value" value=<%= r.t_water %>></p><br>
-            <p>Electric*:
-            <input type="number" name="tokimonElectric"class="value" value=<%= r.t_electric %>></p><br>
-            <p>Frozen*:
-            <input type="number" name="tokimonFrozen" class="value" value=<%= r.t_frozen %>></p><br>
-            <p>Name of Trainer:
-            <input type="text" name="tokimonTrainer" class="value" value=<%= r.t_trainer %>></p><br>
-            <input type="submit" value="Submit">
-        </form>
+            <form action="/modify" onsubmit="return validateAddNew()" method="POST">
+                <p>Tokimon ID: <%= r.id %>
+                <input type="text" name="tokimonID" class="value ToBeHidden" value=<%= r.id %>>
+                </p><br>
+                <p>Tokimon Name:
+                <input type="text" name="tokimonName" class="value" value=<%= r.t_name %>></p><br>
+                <p>Weight*:
+                <input type="number" name="tokimonWeight" class="value" value=<%= r.t_weight %>></p><br>
+                <p>Height*:
+                <input type="number" name="tokimonHeight" class="value" value=<%= r.t_height %>></p><br>
+                <p>Fly*:
+                <input type="number" name="tokimonFly" class="value" value=<%= r.t_fly %>></p><br>
+                <p>Fight*:
+                <input type="number" name="tokimonFight" class="value" value=<%= r.t_fight %>></p><br>
+                <p>Fire*:
+                <input type="number" name="tokimonFire" class="value" value=<%= r.t_fire %>></p><br>
+                <p>Water*:
+                <input type="number" name="tokimonWater" class="value" value=<%= r.t_water %>></p><br>
+                <p>Electric*:
+                <input type="number" name="tokimonElectric"class="value" value=<%= r.t_electric %>></p><br>
+                <p>Frozen*:
+                <input type="number" name="tokimonFrozen" class="value" value=<%= r.t_frozen %>></p><br>
+                <p>Name of Trainer:
+                <input type="text" name="tokimonTrainer" class="value" value=<%= r.t_trainer %>></p><br>
+                <input type="submit" value="Submit">
+            </form>
+        <% }); %>
     </div>
 </body>
 </html>
