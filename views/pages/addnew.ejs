@@ -13,7 +13,7 @@
     <!-- <script type="text/javascript" src="/formjs.js"></script> -->
     
     <script src="js/script.js"></script>
-    <!-- <script src="js/totalCalc.js" defer></script> -->
+    <script src="js/totalCalc.js" defer></script>
 </head>
 
 <body>
@@ -24,24 +24,24 @@
             <p>Tokimon Name:
             <input type="text" name="tokimonName" class="value"></p><br>
             <p>Weight*:
-            <input type="number" name="tokimonWeight" class="value"></p><br>
+            <input type="number" name="tokimonWeight" class="value" onkeyup="sumfunc()"></p><br>
             <p>Height*:
-            <input type="number" name="tokimonHeight" class="value"></p><br>
+            <input type="number" name="tokimonHeight" class="value" onkeyup="sumfunc()"></p><br>
             <p>Fly*:
-            <input type="number" name="tokimonFly" class="value"></p><br>
+            <input type="number" name="tokimonFly" class="value" onkeyup="sumfunc()"></p><br>
             <p>Fight*:
-            <input type="number" name="tokimonFight" class="value"></p><br>
+            <input type="number" name="tokimonFight" class="value" onkeyup="sumfunc()"></p><br>
             <p>Fire*:
-            <input type="number" name="tokimonFire" class="value"></p><br>
+            <input type="number" name="tokimonFire" class="value" onkeyup="sumfunc()"></p><br>
             <p>Water*:
-            <input type="number" name="tokimonWater" class="value"></p><br>
+            <input type="number" name="tokimonWater" class="value" onkeyup="sumfunc()"></p><br>
             <p>Electric*:
-            <input type="number" name="tokimonElectric"class="value"></p><br>
+            <input type="number" name="tokimonElectric"class="value" onkeyup="sumfunc()"></p><br>
             <p>Frozen*:
-            <input type="number" name="tokimonFrozen" class="value"></p><br>
+            <input type="number" name="tokimonFrozen" class="value" onkeyup="sumfunc()"></p><br>
             <p>Name of Trainer:
             <input type="text" name="tokimonTrainer" class="value"></p><br>
-            <input type="number" name="tokimonTotal" class="ToBeHidden tokTotal"></p>
+            <input type="number" name="tokimonTotal" class="ToBeHidden tokTotal" value=0></p>
             <p>Description:<br>
             <textarea rows="4" cols="50" name="tokimonDescription">
             </textarea></p>

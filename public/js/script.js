@@ -1,7 +1,7 @@
 function validateAddNew() {
 
     var formFields = document.querySelectorAll(".value");
-    var total = document.getElementsByName("tokimonTotal");
+    // var total = document.getElementsByName("tokimonTotal");
     var i;
      console.log(formFields[0].value);
 
@@ -30,10 +30,10 @@ function validateAddNew() {
             }
         }
 
-        total.value = 0;
-        for(i=1; i<9; i++) {
-            total.value = parseInt(formFields[i].value) + total.value;
-        }
+        // total.value = 0;
+        // for(i=1; i<9; i++) {
+        //     total.value = parseInt(formFields[i].value) + total.value;
+        // }
 }
 
 function confirmDelete() {

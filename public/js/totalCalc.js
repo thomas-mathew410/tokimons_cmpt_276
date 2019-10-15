@@ -1,25 +1,26 @@
 
 
-var total = document.getElementsByName("tokimonTotal");
+// var total = document.getElementsByName("tokimonTotal");
 
-var formFields = document.querySelectorAll(".value");
+// var formFields = document.querySelectorAll(".value");
 
-console.log(total.value);
+// console.log(total.value);
 
 // formFields[1].addEventListener("keyup", function() {
     //     total.value = total.value + formFields[1].value;
     //     console.log(total.value);
     // })
     
-    formFields.forEach(function(field) {
-        field.addEventListener("keyup", function() {
-            total.value = 0;
-            for(i=1; i<9; i++) {
-                total.value = parseInt(formFields[i].value) + total.value;
-            }
-        console.log(total.value);
-    })
-})
+//     formFields.forEach(function(field) {
+//         field.addEventListener("keyup", function() {
+//             var sum = 0;
+//             for(i=1; i<9; i++) {
+//                 sum = parseInt(formFields[i].value) + sum;
+//                 total.defaultValue = sum;
+//             }
+//         console.log(total.value);
+//     })
+// })
 
 // formFields.forEach(field => {
 //     field.addEventListener("keyup", event => {
@@ -50,3 +51,14 @@ console.log(total.value);
 //         total.value = 
 //     })
 // }
+
+function sumfunc() {
+    var total = document.getElementsByName("tokimonTotal");
+    var formFields = document.querySelectorAll(".value");
+
+    for(i=1; i<9; i++) {
+        total.defaultValue = parseInt(formFields[i].value);
+    }
+    console.log(total.value);
+
+}
