@@ -52,7 +52,7 @@ express()
       if (error)
         res.end(error);
       var results = {'rows': result.rows };
-      
+
       // res.send(`${results.rows.forEach((r) => {r.id})}`);
       // console.log(results);
       res.redirect(301, `/Tokimons`);
@@ -69,6 +69,7 @@ express()
     //   deletedResults = {'rows': result.rows };
     //   // res.json(deletedResults)
     // });
+    
     var deleteTokiQuery = `DELETE FROM Tokimon WHERE id='${req.body["tokiID"]}'`;
     console.log(deleteTokiQuery);
     pool.query(deleteTokiQuery, (error) => {
