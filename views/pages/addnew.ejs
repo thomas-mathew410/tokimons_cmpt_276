@@ -20,32 +20,34 @@
     <div id="addPageBackgroundImage">
         <h2>Great! Add the tokimon you found to the tokimon database</h2>
         <p>Enter the name of the Tokimon and the other details. The fields marked with an astrix takes only integers from 0 to 100. Be sure to fill all the fields correctly. The form will not be accepted otherwise!</p>
-       <form action="/add" onsubmit="return validateAddNew()" method="POST">
-            <p>Tokimon Name:
-            <input type="text" name="tokimonName" class="value"></p><br>
-            <p>Weight*:
-            <input type="number" name="tokimonWeight" class="value" onkeyup="sumfunc()"></p><br>
-            <p>Height*:
-            <input type="number" name="tokimonHeight" class="value" onkeyup="sumfunc()"></p><br>
-            <p>Fly*:
-            <input type="number" name="tokimonFly" class="value" onkeyup="sumfunc()"></p><br>
-            <p>Fight*:
-            <input type="number" name="tokimonFight" class="value" onkeyup="sumfunc()"></p><br>
-            <p>Fire*:
-            <input type="number" name="tokimonFire" class="value" onkeyup="sumfunc()"></p><br>
-            <p>Water*:
-            <input type="number" name="tokimonWater" class="value" onkeyup="sumfunc()"></p><br>
-            <p>Electric*:
-            <input type="number" name="tokimonElectric"class="value" onkeyup="sumfunc()"></p><br>
-            <p>Frozen*:
-            <input type="number" name="tokimonFrozen" class="value" onkeyup="sumfunc()"></p><br>
-            <p>Name of Trainer:
-            <input type="text" name="tokimonTrainer" class="value"></p><br>
-            <input type="number" name="tokimonTotal" class="ToBeHidden tokTotal" value=0></p>
-            <p>Description:<br>
-            <textarea rows="4" cols="50" name="tokimonDescription">
-            </textarea></p>
-            <input type="submit" value="Submit">
+       <form class="forms" action="/add" onsubmit="return validateAddNew()" method="POST">
+            <div class="addContainer">
+                <p>Tokimon Name:
+                <input type="text" name="tokimonName" class="value"></p><br>
+                <p>Weight*:
+                <input type="number" name="tokimonWeight" class="value" onkeyup="sumfunc()"></p><br>
+                <p>Height*:
+                <input type="number" name="tokimonHeight" class="value" onkeyup="sumfunc()"></p><br>
+                <p>Fly*:
+                <input type="number" name="tokimonFly" class="value" onkeyup="sumfunc()"></p><br>
+                <p>Fight*:
+                <input type="number" name="tokimonFight" class="value" onkeyup="sumfunc()"></p><br>
+                <p>Fire*:
+                <input type="number" name="tokimonFire" class="value" onkeyup="sumfunc()"></p><br>
+                <p>Water*:
+                <input type="number" name="tokimonWater" class="value" onkeyup="sumfunc()"></p><br>
+                <p>Electric*:
+                <input type="number" name="tokimonElectric"class="value" onkeyup="sumfunc()"></p><br>
+                <p>Frozen*:
+                <input type="number" name="tokimonFrozen" class="value" onkeyup="sumfunc()"></p><br>
+                <p>Name of Trainer:
+                <input type="text" name="tokimonTrainer" class="value"></p><br>
+                <input type="number" name="tokimonTotal" class="ToBeHidden tokTotal" value=0></p>
+                <p>Description:<br>
+                <textarea rows="4" cols="50" name="tokimonDescription">
+                </textarea></p>
+                <input type="submit" value="Submit">
+            </div>
         </form>
     </div>
 </body>

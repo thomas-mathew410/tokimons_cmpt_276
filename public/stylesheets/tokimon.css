@@ -111,6 +111,15 @@ td {
   box-sizing: border-box;
 }
 
+.addContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.forms {
+  background-color: #e9eef1;
+  margin: 20px 20px 20px 20px;
+}
 /*
 .greyPart {
   width: 70%;
