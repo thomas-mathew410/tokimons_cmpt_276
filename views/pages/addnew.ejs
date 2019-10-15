@@ -22,10 +22,18 @@
         <p>Enter the name of the Tokimon and the other details. The fields marked with an astrix takes only integers from 0 to 100. Be sure to fill all the fields correctly. The form will not be accepted otherwise!</p>
        <form class="forms" action="/add" onsubmit="return validateAddNew()" method="POST">
             <div class="addContainer">
-                <p class="textItem">Tokimon Name:
-                <input type="text" name="tokimonName" class="value fieldItem"></p>
+                <table>
+                    <tr>
+                        <td>
+                            <div >Tokimon Name:</div>
+                        </td>
+                        <td>
+                            <div ><input type="text" name="tokimonName" class="value fieldItem"></div>
+                        </td>
+                    </tr>
+                </table>
                 <p class="textItem">Weight*:
-                <input type="number" name="tokimonWeight" class="value fieldItem" onkeyup="sumfunc()"></p>
+                <input type="number" name="tokimonWeight" class="value fieldItem" onkeyup="sumfunc()"></p><br>
                 <p class="textItem">Height*:
                 <input type="number" name="tokimonHeight" class="value fieldItem" onkeyup="sumfunc()"></p><br>
                 <p class="textItem">Fly*:
