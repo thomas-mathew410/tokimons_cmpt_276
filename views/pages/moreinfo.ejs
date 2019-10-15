@@ -6,83 +6,89 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/tokimon.css" />
     <script src="js/script.js"></script>
   </head>
-  <body>    
-    <% rows.forEach((r) => { %>
-        <h2>
-          <%= r.t_name %>
-        </h2>
-        <h3>
-          Tokimon ID
-        </h3>
-        <p>
-          <%= r.id %>
-        </p>
-        <h3 class="ToBeHidden">
-            Tokimon Total
-        </h3>
-        <p class="ToBeHidden">
-            <%= r.t_total %>
-        </p>
-        <h3>
-            Tokimon Weight
-        </h3>
-        <p>
-            <%= r.t_weight %>
-        </p>
-        <h3>
-            Tokimon Height
-        </h3>
-        <p>
-            <%= r.t_height %>
-        </p>
-        <h3>
-            Tokimon Fly
-        </h3>
-        <p>
-            <%= r.t_fly %>
-        </p>
-        <h3>
-            Tokimon Fight
-        </h3>
-        <p>
-            <%= r.t_fight %>
-        </p>
-        <h3>
-            Tokimon Fire
-        </h3>
-        <p>
-            <%= r.t_fire %>
-        </p>
-        <h3>
-            Tokimon Water
-        </h3>
-        <p>
-            <%= r.t_water %>
-        </p>
-        <h3>
-            Tokimon Electric
-        </h3>
-        <p>
-            <%= r.t_electric %>
-        </p>
-        <h3>
-            Tokimon Frozen
-        </h3>
-        <p>
-            <%= r.t_frozen %>
-        </p>
-        <h3>
-            Tokimon Trainer
-        </h3>
-        <p>
-            <%= r.t_trainer %>
-        </p>
-        <h3>
-            Tokimon Description
-        </h3>
-        <p>
-            <%= r.t_desc %>
-        </p>
-        <% }); %>
+  <body>
+      <div id="moreInfoPageBackgroundImage">
+
+          <div class="infoContainer">
+                <% rows.forEach((r) => { %>
+
+                <h2 class="infoHead">
+                  <%= r.t_name %>
+                </h2>
+                <h3>
+                  Tokimon ID
+                </h3>
+                <p>
+                  <%= r.id %>
+                </p>
+                <h3 class="ToBeHidden">
+                    Tokimon Total
+                </h3>
+                <p class="ToBeHidden">
+                    <%= r.t_total %>
+                </p>
+                <h3>
+                    Tokimon Weight
+                </h3>
+                <p>
+                    <%= r.t_weight %>
+                </p>
+                <h3>
+                    Tokimon Height
+                </h3>
+                <p>
+                    <%= r.t_height %>
+                </p>
+                <h3>
+                    Tokimon Fly
+                </h3>
+                <p>
+                    <%= r.t_fly %>
+                </p>
+                <h3>
+                    Tokimon Fight
+                </h3>
+                <p>
+                    <%= r.t_fight %>
+                </p>
+                <h3>
+                    Tokimon Fire
+                </h3>
+                <p>
+                    <%= r.t_fire %>
+                </p>
+                <h3>
+                    Tokimon Water
+                </h3>
+                <p>
+                    <%= r.t_water %>
+                </p>
+                <h3>
+                    Tokimon Electric
+                </h3>
+                <p>
+                    <%= r.t_electric %>
+                </p>
+                <h3>
+                    Tokimon Frozen
+                </h3>
+                <p>
+                    <%= r.t_frozen %>
+                </p>
+                <h3>
+                    Tokimon Trainer
+                </h3>
+                <p>
+                    <%= r.t_trainer %>
+                </p>
+                <h3>
+                    Tokimon Description
+                </h3>
+                <p>
+                    <%= r.t_desc %>
+                </p>
+                <% }); %>
+            </div>
+      </div>    
   </body>
 </html>

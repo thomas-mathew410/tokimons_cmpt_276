@@ -151,6 +151,18 @@ body, html {
   justify-content: center;
 }
 
+.infoContainer {
+  background-color: #e9eef1;
+  margin: 0 0 10px 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.infoHead {
+  margin: 0 0 0 25%;
+}
+
 .forms {
   background-color: #e9eef1;
   margin: 20px 80px 20px 80px;
