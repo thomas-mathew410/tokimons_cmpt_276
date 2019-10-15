@@ -74,10 +74,10 @@ body, html {
     /* transform: translate(-50%, -50%); */
   }
 
-  table {
+table {
     border: solid 1pt #c4c5c5;
     border-collapse: collapse;
-    margin: 20px 20px 0 0;
+    margin: 20px 20px 0 20px;
 }
 
 th {
@@ -97,4 +97,18 @@ td {
     padding: 15px 25px 15px 5px;
     font-size: 15px;
     text-align: left;
+}
+
+.greyPart {
+  /*box-sizing: border-box;
+  border: none;*/
+  width: 70%;
+  margin: 0 0 0 20px;
+  padding: 0 0 0 20px;
+  height: 650px;
+  background-color: #e9eef1;
+}
+
+.ToBeHidden {
+  display: none;
 }
