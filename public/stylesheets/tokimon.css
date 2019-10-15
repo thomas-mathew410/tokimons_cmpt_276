@@ -114,11 +114,16 @@ td {
 .addContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .forms {
   background-color: #e9eef1;
   margin: 20px 20px 20px 20px;
+}
+
+.submitButton {
+  width: 10%;
 }
 /*
 .greyPart {
