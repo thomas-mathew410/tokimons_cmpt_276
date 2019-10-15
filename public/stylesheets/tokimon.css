@@ -176,6 +176,11 @@ body, html {
   margin: 0 0 0 25%;
 }
 
+/* The class below is for moreinfo fake table only */
+.fakeHeading {
+  text-align: left;
+}
+
 .forms {
   background-color: #e9eef1;
   margin: 20px 80px 20px 80px;
