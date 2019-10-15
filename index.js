@@ -80,7 +80,8 @@ express()
     // res.send(`POST request to the homepage ${deletedResults}`)
     // res.render('pages/delete', deletedResults);
   })
-  
+
+  .get('/selectToModify', (req, res) => res.redirect(301, `/Tokimons`)) //To handle any refresh
   .post('/selectToModify', (req,res) => {
     var searchTokiQuery = `SELECT * FROM Tokimon WHERE id='${req.body["tokiID"]}'`;
     // var searchResults = new Object();
@@ -122,6 +123,8 @@ express()
   //   res.send('USER');
   // })
   
+  .get('/moreinfo', (req, res) => res.redirect(301, `/Tokimons`)) //To handle any refresh
+
   .post('/moreinfo', (req,res) => {
     var searchTokiQuery = `SELECT * FROM Tokimon WHERE id='${req.body["tokiID"]}'`;
     // var searchResults = new Object();
