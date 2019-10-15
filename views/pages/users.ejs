@@ -44,6 +44,9 @@
             Tokimon Trainer
            </th>
            <th>
+              Tokimon Total
+            </th>
+           <th>
             Options
            </th>
         </tr>
@@ -83,6 +86,9 @@
             </td>
             <td>
                 <%= r.t_trainer %>
+            </td>
+            <td>
+                <%= r.t_total %>
             </td>
             <td>
                 <form action="/delete" onsubmit="return confirmDelete()" method="POST">
