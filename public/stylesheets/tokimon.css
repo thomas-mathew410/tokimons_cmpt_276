@@ -92,6 +92,7 @@ th {
 }
 
 td {
+    line-height: 8px; 
     width: 200px;
     border: solid 1pt #c4c5c5;
     padding: 10pt;
@@ -109,7 +110,7 @@ td {
   background-color: #e9eef1;
 }*/
 
-tr { line-height: 8px; }
+/* tr { line-height: 8px; } */
 
 .ToBeHidden {
   display: none;
