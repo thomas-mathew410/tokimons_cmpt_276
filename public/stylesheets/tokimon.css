@@ -125,6 +125,13 @@ td {
 .submitButton {
   width: 10%;
 }
+
+.textItem {
+  margin: 30px;
+}
+.fieldItem {
+  margin: 30px;
+}
 /*
 .greyPart {
   width: 70%;
