@@ -1,6 +1,7 @@
 function validateAddNew() {
 
     var formFields = document.querySelectorAll(".value");
+    var total = document.getElementsByName("tokimonTotal");
     var i;
      console.log(formFields[0].value);
 
@@ -27,6 +28,11 @@ function validateAddNew() {
                 alert("One or more of the attributes are out of range!");
                 return false;
             }
+        }
+
+        total.value = 0;
+        for(i=1; i<9; i++) {
+            total.value = parseInt(formFields[i].value) + total.value;
         }
 }
 
