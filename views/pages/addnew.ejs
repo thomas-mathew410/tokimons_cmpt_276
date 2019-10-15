@@ -18,11 +18,14 @@
 
 <body>
     <div id="addPageBackgroundImage">
-        <h2>Great! Add the tokimon you found to the tokimon database</h2>
-        <p>Enter the name of the Tokimon and the other details. The fields marked with an astrix takes only integers from 0 to 100. Be sure to fill all the fields correctly. The form will not be accepted otherwise!</p>
+        <h2 class="addPageHeading">Great! Add the tokimon you found to the tokimon database</h2><br><br>
+        <p class="addPageContent"><div class="actualContent">Enter the name of the Tokimon and the other details. The fields marked with an astrix takes only integers from 0 to 100. Be sure to fill all the fields correctly. The form will not be accepted otherwise!</div></p>
        <form class="forms" action="/add" onsubmit="return validateAddNew()" method="POST">
             <div class="addContainer">
                 <table>
+                    <tr>
+                        
+                    </tr>
                     <tr>
                         <td>
                             <div >Tokimon Name:</div>
@@ -105,9 +108,9 @@
                     </tr>
                 </table>
                 <input type="number" name="tokimonTotal" class="ToBeHidden tokTotal" value=0></p>
-                <p class="textItem">Description:<br>
+                <p class="textItem">Description:<br><br>
                 <textarea rows="4" cols="50" name="tokimonDescription" class="textItem">
-                </textarea></p>
+                </textarea></p><br>
                 <input class="submitButton" type="submit" value="Submit">
             </div>
         </form>
