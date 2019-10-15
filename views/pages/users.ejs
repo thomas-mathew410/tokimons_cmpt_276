@@ -93,6 +93,10 @@
                   <input class="ToBeHidden" type="text" name="tokiID" id="tokiID" value=<%= r.id %>>
                   <input type="submit" value="Modify">
                 </form><br>
+                <form action="/moreinfo" method="POST">
+                  <input class="ToBeHidden" type="text" name="tokiID" id="tokiID" value=<%= r.id %>>
+                  <input type="submit" value="More Info">
+                </form><br>
             </td>
           </tr> 
         <% }); %>
