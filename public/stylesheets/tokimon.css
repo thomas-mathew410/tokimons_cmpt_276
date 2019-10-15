@@ -101,7 +101,7 @@ td {
     text-align: left;
 }
 
-input[type=text], select {
+.value {
   width: 30%;
   padding: 12px 20px;
   margin: 8px 0;
