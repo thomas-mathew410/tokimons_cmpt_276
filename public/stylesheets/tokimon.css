@@ -67,6 +67,18 @@ body, html {
     background-size: cover;
   }
 
+  #listPageBackgroundImage {
+    background-image: url("pictures/Pikachu.jpg");
+  
+    
+    height: 200%; 
+  
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   .tokimonSelections {
     margin-left: 40%;
   }
