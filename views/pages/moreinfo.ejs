@@ -15,23 +15,49 @@
                 <h2 class="infoHead">
                   <%= r.t_name %>
                 </h2>
+                <table>
+                    <tr>
+                        <th>
+                            Tokimon ID
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%= r.id %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="ToBeHidden">
+                            Tokimon Total
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="ToBeHidden">
+                            <%= r.t_total %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Tokimon Weight
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%= r.t_weight %>
+                        </td>
+                    </tr>
+                </table>
                 <h3>
-                  Tokimon ID
                 </h3>
                 <p>
-                  <%= r.id %>
                 </p>
                 <h3 class="ToBeHidden">
-                    Tokimon Total
                 </h3>
                 <p class="ToBeHidden">
-                    <%= r.t_total %>
                 </p>
                 <h3>
-                    Tokimon Weight
                 </h3>
                 <p>
-                    <%= r.t_weight %>
                 </p>
                 <h3>
                     Tokimon Height

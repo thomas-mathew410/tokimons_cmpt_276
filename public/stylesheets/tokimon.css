@@ -166,7 +166,7 @@ body, html {
 
 .infoContainer {
   background-color: #e9eef1;
-  margin: 0 0 10px 20%;
+  margin: 5% 10% 10px 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
