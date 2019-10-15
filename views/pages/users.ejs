@@ -10,46 +10,46 @@
   <body>
     <p>Tokimons are rare. This is the list of Tokimons found so far. Each Tokimon has a unique ID which can be used to distinguish those with similar characteristics.</p>
     <div class="greyPart">
-      <table>
+      <table class="actualTable">
         <thead>
           <tr>
-            <th>
+            <th class="actualTh">
               Tokimon ID
             </th>
-            <th>
+            <th class="actualTh">
               Tokimon Name
             </th>
-            <th>
+            <th class="actualTh">
               Tokimon Weight
              </th>
-             <th>
+             <th class="actualTh">
               Tokimon Height
              </th>
-             <th>
+             <th class="actualTh">
               Tokimon Fly
              </th>
-             <th>
+             <th class="actualTh">
               Tokimon Fight
              </th>
-             <th>
+             <th class="actualTh">
               Tokimon Fire
              </th>
-             <th>
+             <th class="actualTh">
               Tokimon Water
              </th>
-             <th>
+             <th class="actualTh">
               Tokimon Electric
              </th>
-             <th>
+             <th class="actualTh">
               Tokimon Frozen
              </th>
-             <th>
+             <th class="actualTh">
               Tokimon Trainer
              </th>
              <th class="ToBeHidden">
                 Tokimon Total
               </th>
-             <th>
+             <th  class="actualTh"> 
               Options
              </th>
           </tr>
@@ -57,43 +57,43 @@
         <tbody>
           <% rows.forEach((r) => { %>
             <tr>
-              <td>
+              <td class="actualTd">
                   <%= r.id %>
               </td>
-              <td>
+              <td class="actualTd">
                   <%= r.t_name %>
               </td>
-              <td>
+              <td class="actualTd">
                   <%= r.t_weight %>
               </td>
-              <td>
+              <td class="actualTd">
                   <%= r.t_height %>
               </td>
-              <td>
+              <td class="actualTd">
                   <%= r.t_fly %>
               </td>
-              <td>
+              <td class="actualTd">
                   <%= r.t_fight %>
               </td>
-              <td>
+              <td class="actualTd">
                   <%= r.t_fire %>
               </td>
-              <td>
+              <td class="actualTd">
                   <%= r.t_water %>
               </td>
-              <td>
+              <td class="actualTd">
                   <%= r.t_electric %>
               </td>
-              <td>
+              <td class="actualTd">
                   <%= r.t_frozen %>
               </td>
-              <td>
+              <td class="actualTd">
                   <%= r.t_trainer %>
               </td>
               <td class="ToBeHidden">
                   <%= r.t_total %>
               </td>
-              <td>
+              <td class="actualTd">
                   <form action="/delete" onsubmit="return confirmDelete()" method="POST">
                     <input class="ToBeHidden" type="text" name="tokiID" value=<%= r.id %>>
                     <input type="submit" value="Delete">

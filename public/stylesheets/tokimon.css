@@ -74,14 +74,14 @@ body, html {
     /* transform: translate(-50%, -50%); */
   }
 
-table {
+  .actualTable {
     background-color: #e9eef1;
     border: solid 1pt #c4c5c5;
     border-collapse: collapse;
     margin: 20px 20px 20px 20px;
 }
 
-th {
+.actualTh {
     background-color: #ddddde;
     width: 200px;
     border: solid 1pt #c4c5c5;
@@ -91,7 +91,7 @@ th {
     font-size: 15px;
 }
 
-td {
+.actualTd {
     line-height: 8px; 
     width: 200px;
     border: solid 1pt #c4c5c5;
