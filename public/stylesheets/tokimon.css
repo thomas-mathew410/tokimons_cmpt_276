@@ -29,6 +29,19 @@ body, html {
     background-size: cover;
   }
 
+  #modifyPageBackgroundImage {
+    
+    background-image: url("pictures/Pikachu.jpg");
+  
+    
+    height: 200%; 
+  
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   .tokimonSelections {
     margin-left: 40%;
   }
@@ -131,6 +144,13 @@ body, html {
   justify-content: center;
 }
 
+.modifyContainer {
+  margin: 0 0 10px 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .forms {
   background-color: #e9eef1;
   margin: 20px 80px 20px 80px;
@@ -153,10 +173,6 @@ body, html {
 .addPageContent {
   background-color: white;
   /* margin: 0 12% 0 12%; */
-}
-.actualContent {
-  background-color: white;
-  margin: 0 12% 0 12%;
 }
 
 .addPageHeading {
