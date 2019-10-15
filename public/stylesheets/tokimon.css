@@ -73,3 +73,28 @@ body, html {
     left: 20%;
     /* transform: translate(-50%, -50%); */
   }
+
+  table {
+    border: solid 1pt #c4c5c5;
+    border-collapse: collapse;
+    margin: 20px 20px 0 0;
+}
+
+th {
+    background-color: #ddddde;
+    width: 200px;
+    border: solid 1pt #c4c5c5;
+    padding: 1pt;
+    text-align: left;
+    padding: 0px 0px 0px 5px;
+    font-size: 15px;
+}
+
+td {
+    width: 200px;
+    border: solid 1pt #c4c5c5;
+    padding: 10pt;
+    padding: 15px 25px 15px 5px;
+    font-size: 15px;
+    text-align: left;
+}

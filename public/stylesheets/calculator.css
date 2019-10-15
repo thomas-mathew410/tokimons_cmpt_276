@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    background-color: #aa1731;
+ }
+
+ .BlackBorderTop {
+     margin: 0 70px 0 70px;
+     height: 30px;
+     background-color:  black;
+ }
+
+ .mainBody {
+     /*box-sizing: border-box;
+     border: none;*/
+     margin: 0 70px 0 70px;
+     height: 800px;
+     background-color: white;
+ }
+ 
+ h1 {
+     margin: 0;
+     padding: 30px 0 10px 20px;
+     font-family: Arial;
+     font-size: 25px;
+ }
+
+ .greyPart {
+    /*box-sizing: border-box;
+    border: none;*/
+    width: 70%;
+    margin: 0 0 0 20px;
+    padding: 0 0 0 20px;
+    height: 650px;
+    background-color: #e9eef1;
+}
+
+ .BlackBorderBot {
+    margin: 0 70px 70px 70px;
+    height: 40px;
+    background-color:  black;
+}
+
+h2 {
+    padding: 20px 0 0 0;
+    font-family: Arial;
+    font-size: 20px;
+    color: #aa1731
+}
+
+table {
+    border: solid 1pt #c4c5c5;
+    border-collapse: collapse;
+    margin: 20px 20px 0 0;
+}
+
+th {
+    background-color: #ddddde;
+    width: 200px;
+    border: solid 1pt #c4c5c5;
+    padding: 1pt;
+    text-align: left;
+    padding: 0px 0px 0px 5px;
+    font-size: 15px;
+}
+
+td {
+    width: 200px;
+    border: solid 1pt #c4c5c5;
+    padding: 10pt;
+    padding: 15px 25px 15px 5px;
+    font-size: 15px;
+    text-align: left;
+}
+
+.percent {
+    text-align: center;
+}
+
+.textArea {
+    height: 30px;
+    width: 70%;
+    padding: 2px 5px 2px 5px;
+    /*margin: 8px 0;*/
+    display: inline-block;
+    border: 1px solid #ccc;
+    /*border-radius: 4px;*/
+    box-sizing: border-box;
+}
+
+#result {
+    color: #aa1731;
+    font-weight: bold;
+}
+
+button {
+    background-color: #aa1731;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    /*text-align: right;*/
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .submitButtons {
+      text-align: right;
+      padding: 0 20px 0 0;
+  }
