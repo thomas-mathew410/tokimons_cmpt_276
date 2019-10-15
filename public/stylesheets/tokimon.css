@@ -4,15 +4,15 @@ body, html {
   }
 
   h1 {
-    margin: 0 0 0 30%;
+    margin: 0 0 5% 40%;
   }
 
   h2 {
-    margin: 0 0 0 25%;
+    margin: 0 0 5% 35%;
   }
   
   .pageContent {
-    margin: 0 10% 10px 10%;
+    margin: 0 10% 10% 10%;
   }
 
   #backgroundImage {
@@ -87,6 +87,11 @@ body, html {
     top: 50%;
     left: 20%;
     /* transform: translate(-50%, -50%); */
+  }
+
+  .centered {
+    font-weight: 900;
+    background-color: white;
   }
 
   .addTokimon {
