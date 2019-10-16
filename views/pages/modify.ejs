@@ -38,7 +38,7 @@
                                 Tokimon Name:
                             </td>
                             <td>
-                                <input type="text" name="tokimonName" class="value" value=<%= r.t_name %>>
+                                <input type="text" name="tokimonName" class="value" pattern="[A-Za-z0-9]" value=<%= r.t_name %>>
                             </td>
                         </tr>
                         <tr>
@@ -110,13 +110,13 @@
                                 Name of Trainer:
                             </td>
                             <td>
-                                <input type="text" name="tokimonTrainer" class="value" value=<%= r.t_trainer %>>
+                                <input type="text" name="tokimonTrainer" class="value" pattern="[A-Za-z0-9]" value=<%= r.t_trainer %>>
                             </td>
                         </tr>
                     </table>
                         <input type="number" name="tokimonTotal" class="ToBeHidden tokTotal" value=<%= r.t_total %>></p>
                         <p class="textItem">Description:<br>
-                        <textarea rows="4" cols="50" name="tokimonDescription"><%= r.t_desc %>
+                        <textarea rows="4" cols="50" pattern="[A-Za-z0-9]" name="tokimonDescription"><%= r.t_desc %>
                         </textarea></p><br>
                         <input class="submitButton" type="submit" value="Submit">
                 </div>
